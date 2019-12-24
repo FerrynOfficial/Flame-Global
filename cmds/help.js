@@ -13,7 +13,7 @@ exports.run = (client, message, args) => {
     .addBlankField()
     .addField("**Техническая Поддержка**","[Нажмите сюда](https://discord.gg/TszUh32)")
     .addBlankField()
-    .addField("**Пригласить бота на сервер**", "[Нажмите сюда](https://discordapp.com/login?redirect_to=%2Foauth2%2Fauthorize%3Fclient_id%3D659039854834745344%26scope%3Dbot%26permissions%3D8)")
+    .addField("**Пригласить бота на сервер**", "[Нажмите сюда](https://discordapp.com/oauth2/authorize?client_id=659082682118045716&scope=bot&permissions=8)")
     .setFooter('В скором времени будет добавлено больше команд!')
     message.member.send(embed)
     var embed2 = new Discord.RichEmbed()
