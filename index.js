@@ -4,7 +4,7 @@ const fs = require('fs')
 const ms = require('ms')
 const superagent = require('superagent')
 const config = require("./config.json")
-client.login('NjU5MDM5ODU0ODM0NzQ1MzQ0.XgIgvg.b1Vd1L2CY4qaG6k3nUFNFYsCv9o')
+client.login(process.env.BOT_TOKEN)
 client.owner = '525003205394825257';
 client.on('ready', () => {
     client.user.setStatus('dnd')
