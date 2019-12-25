@@ -9,7 +9,7 @@ client.owner = '525003205394825257';
 client.on('ready', () => {
     client.user.setStatus('dnd')
     if (config.activity.streaming == true) {
-        client.user.setActivity(`на ${client.users.size} серверах | >help`, {url: 'https://twitch.tv/username'})
+        client.user.setActivity(`с ${client.users.size} пользователями | >help`, {url: 'https://twitch.tv/username'})
     }
 })
 client.prefix = '>'
