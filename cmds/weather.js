@@ -6,11 +6,6 @@ exports.run = async(client, message, args, tools) => {
 
     weather.find({search: args.join(" "), degreeType: 'F'}, function(err, result) {
         if (err) message.channel.send(err)
-
-        if (result === undefined || result.length === 0) {
-            message.channel.send('**Ничего не найдено!**')
-            return
-        }
          var embed = new Discord.RichEmbed()
          .setAuthor(`Погода в ${current.observationpoint}`)
          .setThumbnail(current.imageURL)
