@@ -3,6 +3,7 @@ const client = new Discord.Client();
 const fs = require('fs')
 const ms = require('ms')
 const superagent = require('superagent')
+const weather = require('weather-js')
 const config = require("./config.json")
 client.login(process.env.BOT_TOKEN)
 client.owner = '525003205394825257';
