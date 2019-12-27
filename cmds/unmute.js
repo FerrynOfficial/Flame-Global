@@ -1,5 +1,6 @@
 exports.run = async(client, message, args) => {
     const Discord = require('discord.js')
+    var embed = new Discord.RichEmbed()
     var muser = message.mentions.members.first()
     if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('У вас нет прав!')
     if(!muser) return message.reply('Укажите пользователя которого хотите размутить!')
