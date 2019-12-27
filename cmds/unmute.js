@@ -7,7 +7,7 @@ exports.run = async(client, message, args) => {
     if(!muser.highestRole.calculatedPosition >= message.guild.me.highestRole.calculatedPosition && message.author.id !== message.guild.ownerID) return message.reply('У меня нет прав!')
     var muterole = message.guild.roles.find(`name`, 'Muted')
     if(!muterole && muser.roles.has(muterole.id)) 
-    let embed = new Discord.RichEmbed()
+    var embed = new Discord.RichEmbed()
     .setAuthor(message.author.username, message.author.avatarURL)
     .setDescription(`**Пользователь ${muser} был размучен!**`)
     .addField('**Модератор**', message.author, true)
