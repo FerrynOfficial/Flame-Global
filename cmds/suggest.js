@@ -13,10 +13,10 @@ exports.run = async(client, message, args) => {
         message.channel.send('Укажите идею, которую хотите предложить.')
         return
     }
-    embed.setTitle('Идея')
+    embed.setTitle('Предложение')
     embed.setDescription(suggest)
     embed.setColor('RANDOM')
-    embed.addField('Автор идеи', message.author, true)
+    embed.addField('**Автор идеи**', message.author, true)
     ichannel.send(embed)
     embed1.setDescription('**Ваша идея была успешно отправлена!**')
     embed1.setColor('006400')
