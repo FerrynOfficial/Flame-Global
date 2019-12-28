@@ -11,7 +11,7 @@ exports.run = async(client, message, args) => {
     embed.setDescription(`**Пользователь ${muser} был размучен!**`)
     embed.addField('**Модератор**', message.author, true)
     embed.setColor('006400')
-    message.channel.send()
+    message.channel.send(embed)
     await muser.removeRole(muterole)
 }
     exports.help = {
