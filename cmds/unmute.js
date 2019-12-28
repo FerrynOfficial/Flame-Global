@@ -15,8 +15,12 @@ exports.run = async(client, message, args) => {
     embed.setColor('006400')
     message.channel.send(embed)
     await muser.removeRole(muterole)
+    var embed1 = new Discord.RichEmbed()
+    .setTitle('Unmute | Logs')
+    .setDescription(`**Пользователь ${muser} был размучен!**`)
+    .addField('**Модератор**', message.author, true)
+     logs.send(embed1)
 }
     exports.help = {
         name: 'unmute'
     }
-
