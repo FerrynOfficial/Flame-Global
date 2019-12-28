@@ -1,8 +1,12 @@
 exports.run = async(client, message, args) => {
     const Discord = require('discord.js')
     var embed = new Discord.RichEmbed()
-    client.owner = '525003205394825257'
-    
+    var embed1 = new Discord.RichEmbed()
+    var ichannel = client.channels.get('660473799191560204')
+    if(!ichannel) {
+        message.channel.send('Channel is undefined!')
+        return
+    }
 
     var suggest = args.slice(0).join(' ')
     if (!suggest) {
@@ -13,7 +17,10 @@ exports.run = async(client, message, args) => {
     embed.setDescription(suggest)
     embed.setColor('RANDOM')
     embed.addField('Автор идеи', message.author, true)
-    client.application.owner.send(embed)
+    ichannel.send(embed)
+    embed1.setDescription('**Ваша идея была успешно отправлена!**')
+    embed1.setColor('006400')
+    message.channel.send(embed1)
 }
 exports.help = {
     name: 'suggest'
